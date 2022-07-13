@@ -2,6 +2,8 @@ import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as path from 'path';
+import { join } from 'path';
+import { ServeStaticModule } from '@nestjs/serve-static';
 
 import { LoggerMiddleware } from './logger.middleware';
 import { UserModule } from './user/user.module';
@@ -24,6 +26,9 @@ import { UserModule } from './user/user.module';
       migrationsTableName: 'migration',
       migrations: [path.join(__dirname), 'migration/*.{.ts,.js}'],
       synchronize: process.env.NODE_ENV === 'dev',
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, './', 'ClientApp'),
     }),
     UserModule,
   ],
