@@ -21,6 +21,7 @@ export class UserService {
     user.lastName = 'Loutocký';
     user.password = 'password';
     user.createdBy = 'loutocky';
+    user.lastChangedBy = 'loutocky';
 
     return this.repository.save(user);
   }
