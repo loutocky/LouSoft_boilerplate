@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "build:prod": "cd ./ClientApp && npm install && ng build --configuration production --output-path ../dist/ClientApp && cd .. && npm install && nest build && cp ./package.json ./dist/package.json && echo 'web: node main.js' > ./dist/Procfile",
+    "build:prod": "cd ./ClientApp && npm install && ng build --configuration production --output-path ../dist/ClientApp && cd .. && npm install && nest build && cp ./package.json ./dist/package.json && cp ./.env.prod ./dist && echo 'web: node main.js' > ./dist/Procfile && echo 'unsafe-perm=true' > ./dist/.npmrc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "export NODE_ENV=dev && nest start --watch",
