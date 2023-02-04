@@ -338,7 +338,7 @@
   </div>
 
   <div class="users">
-    <button *ngIf="!users$" (click)="loadUsers()">Load Users</button>
+    <button *ngIf="!users$" (click)="loadUsers()">{{ 'app.load-users'|translate }}</button>
     <div *ngIf="users$ | async as users">
       {{ users|json }}
     </div>

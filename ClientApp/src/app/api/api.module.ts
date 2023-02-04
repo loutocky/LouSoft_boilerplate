@@ -10,7 +10,7 @@ import {
   ApiModule as ConfigApiModule,
   BASE_PATH as BASE_PATH_CONFIG,
   Configuration as ConfigConfig,
-} from '../../client-shared';
+} from 'client-shared';
 
 export function basePathFactory(): string {
   const baseUrl = document

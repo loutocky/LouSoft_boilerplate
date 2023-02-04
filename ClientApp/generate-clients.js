@@ -14,7 +14,7 @@ const swaggerCodegenCli = path.resolve(
   path.join(__dirname, 'swagger-codegen-cli.jar'),
 );
 
-const tmpDir = path.join(__dirname, 'src/client-shared');
+const tmpDir = path.join(__dirname, 'client-shared');
 
 const main = async () => {
   process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
