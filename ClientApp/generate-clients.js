@@ -7,7 +7,7 @@ const path = require('path');
 const exec = require('child_process').exec;
 
 const swaggerCli =
-  'https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/3.0.34/swagger-codegen-cli-3.0.34.jar';
+  'https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/3.0.40/swagger-codegen-cli-3.0.40.jar';
 
 // Paths
 const swaggerCodegenCli = path.resolve(
